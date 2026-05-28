@@ -55,28 +55,27 @@ public class main {
                     contPdf+=resultado[2];
                 }
             }
+        }
+        else
+        {
+            String nombre= file.getName().toLowerCase();
+
+            if(nombre.endsWith(".txt")==true)
+            {
+                contTxt++;
+            }
+            else if(nombre.endsWith(".java")==true)
+            {
+                contJava++;
+            }
+            else if(nombre.endsWith(".pdf")==true)
+            {
+                contPdf++;
+            }
             else
             {
-                String nombre= file.getName().toLowerCase();
-                
-                if(nombre.endsWith(".txt")==true)
-                {
-                    contTxt++;
-                }
-                else if(nombre.endsWith(".java")==true)
-                {
-                    contJava++;
-                }
-                else if(nombre.endsWith(".pdf")==true)
-                {
-                    contPdf++;
-                }
-                else
-                {
-                    contOtros++;
-                }
+                contOtros++;
             }
-            
         }
         return new int[]{contTxt, contJava, contPdf, contOtros};
     }
