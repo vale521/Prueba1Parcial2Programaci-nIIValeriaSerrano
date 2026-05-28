@@ -7,6 +7,7 @@ package pruebaii;
 import java.io.File;
 import java.util.Scanner;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,6 +30,7 @@ public class main {
           int[] cantidades= cantidades(carpeta);
           System.out.println("RESUMEN TOTAL DE ARCHIVOS ENCONTRADOS");
           System.out.println("TXT: "+cantidades[0]+"\nJAVA: "+cantidades[1]+"\nPDF: "+cantidades[2]+"\nOTROS: "+cantidades[3]);
+          JOptionPane.showMessageDialog(null, "RESUMEN TOTAL DE ARCHIVOS ENCONTRADOS\nTXT: "+cantidades[0]+"\nJAVA: "+cantidades[1]+"\nPDF: "+cantidades[2]+"\nOTROS: "+cantidades[3]);
         }
         else
         {
